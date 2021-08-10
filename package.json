@@ -1,26 +1,30 @@
 {
-  "name": "belajar-express",
-  "version": "1.0.0",
-  "description": "belajar membuat res API ",
-  "main": "app.js",
-  "scripts": {
-    "dev": "nodemon app.js"
-  },
-  "keywords": [
-    "express"
-  ],
-  "author": "farhan",
-  "license": "ISC",
-  "dependencies": {
-    "bcrpyt": "^2.0.0",
-    "bcrypt": "^5.0.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-validator": "^6.12.0",
-    "jsonwebtoken": "^8.5.1",
-    "mysql2": "^2.2.5",
-    "nodemon": "^2.0.12",
-    "sequelize": "^6.6.5",
-    "url": "^0.11.0"
-  }
+    "name": "belajar-express",
+    "version": "1.0.0",
+    "description": "belajar membuat res API ",
+    "engines": {
+        "node": "14.17.3",
+        "npm": "6.14.13"
+    },
+    "main": "app.js",
+    "scripts": {
+        "dev": "nodemon app.js"
+    },
+    "keywords": [
+        "express"
+    ],
+    "author": "farhan",
+    "license": "ISC",
+    "dependencies": {
+        "bcrpyt": "^2.0.0",
+        "bcrypt": "^5.0.1",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-validator": "^6.12.0",
+        "jsonwebtoken": "^8.5.1",
+        "mysql2": "^2.2.5",
+        "nodemon": "^2.0.12",
+        "sequelize": "^6.6.5",
+        "url": "^0.11.0"
+    }
 }
