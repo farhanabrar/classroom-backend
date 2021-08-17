@@ -3,15 +3,11 @@ const { MyClass, Join_class, User, Schedule, Materials } = require("../../models
 const { Op } = require("sequelize");
 const { query } = require("express-validator");
 
-exports.getClass = async({ query }, res) => {
+exports.getClass = async({ query, auth }, res) => {
     const where = {};
-    const whereSchedule = {};
-    const whereUser = {};
+
     try {
         if (query.id) where.id = query.id;
-        if (query.schedule_id) whereSchedule.id = query.schedule_id;
-        if (query.user_id) whereUser.id = query.user_id;
-
         const data = await MyClass.findAll({
             where: where,
             attributes: ["id", "name", "description"],
@@ -19,7 +15,7 @@ exports.getClass = async({ query }, res) => {
                 model: Join_class,
                 attributes: ["id", "userId", "role"],
                 include: {
-                    where: whereUser,
+                    where: { id: auth.id },
                     model: User,
                     attributes: ["id", "name", "email"],
                 },

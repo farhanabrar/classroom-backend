@@ -7,9 +7,9 @@ const {
     updateClass,
     deleteClass
 } = require("./MyClassController");
-
+const { checkToken } = require("../../middleware/jwt");
 router
-    .get("/", getClass)
+    .get("/", checkToken, getClass)
     .get("/allClass", getAllClass)
     .post("/", createClass)
     .put("/", updateClass)
